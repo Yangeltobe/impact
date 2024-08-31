@@ -11,14 +11,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>URL Parameters Example</title>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJJQL7SX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-        <h1>Hello, GitHub Pages!</h1>
-        <p>This is my first GitHub Pages site.</p>
+    <h1>URL Parameters</h1>
+    <p id="key1">Key1: </p>
+    <p id="key2">Key2: </p>
+    <script>
+        // Function to get query parameter by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the values from the URL
+        const key1 = getQueryParam('key1');
+        const key2 = getQueryParam('key2');
+
+        // Display the values
+        document.getElementById('key1').textContent = 'Key1: ' + (key1 ? key1 : 'Not provided');
+        document.getElementById('key2').textContent = 'Key2: ' + (key2 ? key2 : 'Not provided');
+    </script>
 </body>
 </html>
+

@@ -32,18 +32,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         document.getElementById('key1').textContent = 'Key1: ' + (key1 ? key1 : 'Not provided');
         document.getElementById('key2').textContent = 'Key2: ' + (key2 ? key2 : 'Not provided');
     </script>
-    function getQueryParam(name) {
-    var urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-}
-
-var customerid = getQueryParam('customerid');
-var customeremail = getQueryParam('customeremail');
-
-// 打印参数到控制台
-console.log('Customer ID:', customerid);
-console.log('Customer Email:', customeremail);
-
-</body>
-</html>
+    </body>
+    </html>
 

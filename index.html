@@ -32,6 +32,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         document.getElementById('key1').textContent = 'Key1: ' + (key1 ? key1 : 'Not provided');
         document.getElementById('key2').textContent = 'Key2: ' + (key2 ? key2 : 'Not provided');
     </script>
+    <script type="text/javascript">
+        function getQueryParam(name) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        var customerid = getQueryParam('customerid');
+        var customeremail = getQueryParam('customeremail');
+
+        console.log('Customer ID:', customerid);
+        console.log('Customer Email:', customeremail);
+
+        // 其他的 JavaScript 代码，比如将参数传递给外部服务
+    </script>
     </body>
     </html>
 

@@ -27,7 +27,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // Get the values from the URL
         const key1 = getQueryParam('key1');
         const key2 = getQueryParam('key2');
-
+        
+        // Debugging output
+        console.log('Key1:', key1);
+        console.log('Key2:', key2);
+        
         // Display the values
         document.getElementById('key1').textContent = 'Key1: ' + (key1 ? key1 : 'Not provided');
         document.getElementById('key2').textContent = 'Key2: ' + (key2 ? key2 : 'Not provided');
